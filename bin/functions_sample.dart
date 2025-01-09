@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:io';
 
 // void main() {
@@ -173,14 +174,63 @@ import 'dart:io';
 
 //--------------named parameters
 
-//1--optional parameter
-void fun({int? a, int? b, int? c}) {
-  print(a);
-  print(b);
-  print(c);
-}
+//1--optional parameter / default parameter
+// 2  required parameter
+// void fun(String name, {int? a, required int? b, int c = 90}) {
+//   print(a);
+//   print(b);
+//   print(c);
+// }
+
+// void main() {
+// fun(2, 3, 3);
+// fun(a: 100, c: 1000);
+// fun(b: b)
+//   fun("shihab", b: 2, c: 38, a: 10);
+// }
+
+//---------------------------------
+// String printName(String name) {
+//   return name;
+// }
+
+//lambda funciton or arrow funciton
+// String printName(String name) => name;
+
+// ------------recursion------------
+// void main(List<String> args) {
+//   fun();
+// }
+
+// void fun() {
+//   print("hai");
+//   fun();
+// }
+
+// print 1- 10 using recursion
+
+// void main() {
+//   fun(1);
+// }
+
+// void fun(int count) {
+//   print(count);
+//   count++;
+//   if (count <= 10) {
+//     fun(count);
+//   }
+// }
+
+// future function
+
+// Future<void> fun() async {} //syntax
 
 void main() {
-  // fun(2, 3, 3);
   fun();
+}
+
+Future<void> fun() async {
+  print("hai");
+  await Future.delayed(Duration(seconds: 3));
+  print("hellooo............");
 }
