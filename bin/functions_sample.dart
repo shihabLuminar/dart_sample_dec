@@ -1,6 +1,3 @@
-import 'dart:async';
-import 'dart:io';
-
 // void main() {
 // print("functions");
 // sum(); // funciton calling
@@ -225,12 +222,42 @@ import 'dart:io';
 
 // Future<void> fun() async {} //syntax
 
+// void main() {
+//   fun();
+// }
+
+// Future<void> fun() async {
+//   print("hai");
+//   await Future.delayed(Duration(seconds: 3));
+//   print("hellooo............");
+// }
+
+// Future<void> main() async {
+//   for (int i = 1; i <= 10; i++) {
+//     await Future.delayed(Duration(seconds: 1));
+//     print(i);
+//   }
+// }
+
+//------ passing function as arguement----------------
+
+// void main() {
+//   fun(() {
+//     print("arg function called");
+//   });
+// }
+
+// void fun(void Function() argFunction) {
+//   print("hai");
+//   argFunction();
+// }
+
 void main() {
-  fun();
+  fun((num1, num2) {
+    print(num1 * num2);
+  });
 }
 
-Future<void> fun() async {
-  print("hai");
-  await Future.delayed(Duration(seconds: 3));
-  print("hellooo............");
+void fun(void Function(int, int) opertaion) {
+  opertaion(100, 3);
 }
