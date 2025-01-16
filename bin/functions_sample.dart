@@ -252,12 +252,12 @@
 //   argFunction();
 // }
 
-void main() {
-  fun((num1, num2) {
-    print(num1 * num2);
-  });
-}
+// void main() {
+//   fun((num1, num2) {
+//     print(num1 * num2);
+//   });
+// }
 
-void fun(void Function(int, int) opertaion) {
-  opertaion(100, 3);
-}
+// void fun(void Function(int, int) opertaion) {
+//   opertaion(100, 3);
+// }

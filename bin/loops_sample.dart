@@ -294,15 +294,15 @@ void main() {
   // * *
   // *
 
-  stdout.write("enter any number : ");
-  int count = int.parse(stdin.readLineSync()!);
+  // stdout.write("enter any number : ");
+  // int count = int.parse(stdin.readLineSync()!);
 
-  for (int row = 1; row <= count; row++) {
-    for (int col = 1; col <= count - row + 1; col++) {
-      stdout.write("* ");
-    }
-    print("");
-  }
+  // for (int row = 1; row <= count; row++) {
+  //   for (int col = 1; col <= count - row + 1; col++) {
+  //     stdout.write("* ");
+  //   }
+  //   print("");
+  // }
 
   // row col count
   // 1    5    5
@@ -362,4 +362,19 @@ void main() {
   //   *   *
   //    * *
   //     *
+
+// while loop
+
+  // int a = 1;
+  // while (a <= 10) {
+  //   print("helooo");
+  //   a++;
+  // }
+
+// do while loop
+  int a = 100;
+  do {
+    print(a);
+    a++;
+  } while (a < 10);
 }
