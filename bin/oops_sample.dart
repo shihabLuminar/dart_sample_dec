@@ -72,3 +72,12 @@ void main() {
   p1.introduce();
   // p2.introduce();
 }
+
+// Parameterized Constructor
+
+// Create a class Mobile with properties brand, model, and price.
+// Initialize the properties using a parameterized constructor.
+// Create an object and display its details using displayDetails funcions.
+
+
+
