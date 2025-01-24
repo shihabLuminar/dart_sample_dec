@@ -70,39 +70,80 @@
 // area of rectangel = length x width
 // perimeter of rectangle = 2 x(length + width)
 
-abstract class Shape {
-  void getArea();
-  void getPerimeter();
+// ------------ abstraction example shape ---------------------
 
-  void displayInfo() {
-    print("This is a shape");
+// abstract class Shape {
+//   void getArea();
+//   void getPerimeter();
+
+//   void displayInfo() {
+//     print("This is a shape");
+//   }
+// }
+
+// class Circle extends Shape {
+//   num radius;
+//   Circle({required this.radius});
+//   @override
+//   void getArea() {
+//     num area = 3.14 * radius * radius;
+//     print("Area of circle is $area");
+//   }
+
+//   @override
+//   void getPerimeter() {
+//     num perimeter = 2 * 3.14 * radius;
+//     print("Perimeter of circle is $perimeter");
+//   }
+// }
+
+// // class Rectangle extends Shape {}
+
+// void main(List<String> args) {
+//   Circle c = Circle(radius: 10);
+//   Circle c2 = Circle(radius: 20);
+//   c.getArea();
+//   c.getPerimeter();
+
+//   c2.getArea();
+//   c2.getPerimeter();
+// }
+//-------------- banking -----------------------------------------
+
+abstract class BankAccount {
+  void calculateInterest();
+
+  void displayAccountType(String type) {
+    print("Account Type $type");
   }
 }
 
-class Circle extends Shape {
-  num radius;
-  Circle({required this.radius});
+class SavingsAccount extends BankAccount {
+  num balance;
+  SavingsAccount(this.balance);
   @override
-  void getArea() {
-    num area = 3.14 * radius * radius;
-    print("Area of circle is $area");
-  }
-
-  @override
-  void getPerimeter() {
-    num perimeter = 2 * 3.14 * radius;
-    print("Perimeter of circle is $perimeter");
+  void calculateInterest() {
+    num interest = balance * 0.05;
+    print(interest);
   }
 }
 
-// class Rectangle extends Shape {}
+class CurrentAccount extends BankAccount {
+  num balance;
+  CurrentAccount(this.balance);
+  @override
+  void calculateInterest() {
+    num interest = balance * 0.03;
+    print(interest);
+  }
+}
 
 void main(List<String> args) {
-  Circle c = Circle(radius: 10);
-  Circle c2 = Circle(radius: 20);
-  c.getArea();
-  c.getPerimeter();
+  SavingsAccount savingsAccount = SavingsAccount(10000);
+  savingsAccount.displayAccountType("Savings");
+  savingsAccount.calculateInterest();
 
-  c2.getArea();
-  c2.getPerimeter();
+  CurrentAccount currentAccount = CurrentAccount(20000);
+  currentAccount.displayAccountType("Current");
+  currentAccount.calculateInterest();
 }

@@ -130,18 +130,18 @@
 // initializes both name and grade using the base class constructor.
 // Display the details using an object of Student.
 
-class Person {
-  String name;
-  Person(this.name);
-}
+// class Person {
+//   String name;
+//   Person(this.name);
+// }
 
-class Student extends Person {
-  String grade;
-  Student(super.name, this.grade);
-}
+// class Student extends Person {
+//   String grade;
+//   Student(super.name, this.grade);
+// }
 
-void main(List<String> args) {
-  Student s1 = Student("shihab", "A");
-  print(s1.grade);
-  print(s1.name);
-}
+// void main(List<String> args) {
+//   Student s1 = Student("shihab", "A");
+//   print(s1.grade);
+//   print(s1.name);
+// }
